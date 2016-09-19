@@ -1,0 +1,8 @@
+desktop.ini
+.DS_Store
+Thumbs.db
+*.swp
+.nfs*
+
+# ignore the cached specs
+specs/_cache
