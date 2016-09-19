@@ -7,7 +7,7 @@ compilers:
 
 files:
   - - Doxyfile
-    - cat $@ ../../../Doxyfile | doxygen -
+    - cat $@ $SUPPORT/Doxyfile | doxygen -
     - hide_contents: true
 
   - [ bin2ascii.cpp, *cpp ]
