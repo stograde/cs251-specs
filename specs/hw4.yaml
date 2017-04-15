@@ -8,7 +8,7 @@ files:
   - [ iotest.cpp, *cpp ]
   - [ countdown.cpp, *cpp, timeout: 0.025, truncate_output: 1000 ]
   - [ countup.cpp, *cpp, timeout: 0.025, truncate_output: 1000 ]
-  - [ story.cpp, *cpp ]
+  - [ story.cpp, *cpp, interactive: true ]
 
 tests:
   - [ iotest.cpp, echo Hawken \n 10 \n 42 | $@.exec ]
