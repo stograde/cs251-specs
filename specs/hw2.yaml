@@ -5,13 +5,14 @@ compilers:
   - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
-  - [ byebye2.cpp, *server, web: true ]
+  - [ hw2.txt ]
   - [ byebye3.cpp, *server, web: true ]
   - [ byebye4.cpp, *server, web: true ]
   - [ byebye5.cpp, *server, web: true ]
   - [ byebye6.cpp, *server, web: true ]
   - [ byebye7.cpp, *server, web: true ]
   - [ smiley.cpp, *server, web: true ]
+  - [ piazza.cpp, *server, web: true ]
 
 inputs:
   - prelude
