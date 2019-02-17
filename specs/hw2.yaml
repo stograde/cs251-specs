@@ -2,16 +2,17 @@
 assignment: hw2
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
-  - [ types.cpp, *cpp ]
-  - [ numLiteral.cpp, *cpp ]
-  - [ strLiteral.cpp, *cpp ]
-  - [ constLiteral.cpp, *cpp ]
+  - [ byebye2.cpp, *server, web: true ]
+  - [ byebye3.cpp, *server, web: true ]
+  - [ byebye4.cpp, *server, web: true ]
+  - [ byebye5.cpp, *server, web: true ]
+  - [ byebye6.cpp, *server, web: true ]
+  - [ byebye7.cpp, *server, web: true ]
+  - [ smiley.cpp, *server, web: true ]
 
-tests:
-  - [ types.cpp, $@.exec ]
-  - [ numLiteral.cpp, $@.exec ]
-  - [ strLiteral.cpp, $@.exec ]
-  - [ constLiteral.cpp, $@.exec ]
+inputs:
+  - prelude
+  - postlude
