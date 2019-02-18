@@ -2,14 +2,10 @@
 assignment: hw4
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
   - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
   - [ hw4.txt ]
   - [ my_button.cpp, *server, web: true ]
   - [ my_button2.cpp, *server, web: true ]
-  - [ story.cpp, *cpp, interactive: true ]
-
-tests:
-  - [ story.cpp, $@.exec ]
+  - [ story.cpp, *server, web: true ]
