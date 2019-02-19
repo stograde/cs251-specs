@@ -49,7 +49,7 @@ extern void append(char *s, const char *pre, const char *t, const char *post="")
 extern void append(char *s, const char *pre, int n, const char *post="");
 extern void append(char *s, const char *pre, const char *t, Range r, const char *post="");
 
-extern int index_of(const char *s, Range &r, const char *query);
+extern int index_of(const char *s, Range r, const char *query);
 extern int index_of(const char *s, int start, const char *query);
 extern int index_of(const char *s, const char *query);
 
@@ -76,14 +76,17 @@ extern bool is_whitespace_or_char(char c, const char *chars = "");
 extern Range split(char *mem, Range &r, const char *sep="");
 extern Range split(char *mem, int &start, const char *sep="");
 
-extern void lstrip(const char *yaml, Range &r, const char *chars = "");
-extern void rstrip(const char *yaml, Range &r, const char *chars = "");
-extern void strip(const char *yaml, Range &r, const char *chars = "");
+extern Range lstrip(const char *yaml, Range r, const char *chars = "");
+extern Range rstrip(const char *yaml, Range r, const char *chars = "");
+extern Range strip(const char *yaml, Range r, const char *chars = "");
 
-extern Range find_value(const char *yaml, Range &r, const char *key, bool skip_quotes = true);
-extern Range find_value(const char *yaml, int &start, const char *key, bool skip_quotes = true);
-extern Range find_value(const char *yaml, const char *key, bool skip_quotes);
+extern Range find_value(const char *yaml, Range r, const char *key, bool skip_quotes = true);
+extern Range find_value(const char *yaml, int start, const char *key, bool skip_quotes = true);
+extern Range find_value(const char *yaml, const char *key, bool skip_quotes = true);
 
 extern int as_integer(const char *yaml, int pos);
+extern int as_integer(const char *yaml, Range r);
+extern int as_double(const char *yaml, int pos);
+extern int as_double(const char *yaml, Range r);
 
 #endif // _SD_FUN_

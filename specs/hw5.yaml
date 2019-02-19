@@ -2,12 +2,10 @@
 assignment: hw5
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
-  - [ f1.cpp, *cpp ]
-  - [ story2.cpp, *cpp ]
-
-tests:
-  - [ f1.cpp, $@.exec ]
-  - [ story2.cpp, $@.exec ]
+  - [ nested_loop2.cpp, *server, web: true ]
+  - [ text_input3.cpp, *server, web: true ]
+  - [ text_input4.cpp, *server, web: true ]
+  - [ text_input5.cpp, *server, web: true ]
