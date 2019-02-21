@@ -1,0 +1,7 @@
+#include"sd_fun.h"
+
+int main()
+{
+	char *mem, *yaml, *response = 0, *query_str = new char[max_length];
+	query_str[0] = 0;
+	initialize(mem, yaml);

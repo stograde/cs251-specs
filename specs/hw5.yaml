@@ -9,3 +9,8 @@ files:
   - [ text_input3.cpp, *server, web: true ]
   - [ text_input4.cpp, *server, web: true ]
   - [ text_input5.cpp, *server, web: true ]
+
+inputs:
+  - prelude
+  - postlude
+  

@@ -9,3 +9,8 @@ files:
   - [ my_button.cpp, *server, web: true ]
   - [ my_button2.cpp, *server, web: true ]
   - [ story.cpp, *server, web: true ]
+
+inputs:
+  - prelude
+  - postlude
+  
