@@ -1,11 +1,17 @@
 ---
 assignment: lab1
-folder: hw1
+
+compilers:
+  - &server 'g++ --std=c++11 $@ $SERVER'
 
 files:
-  - [ Dog.h, null ]
-  - [ Dog.cpp, null ]
-  - [ Makefile, null ]
-  - - tryDog.cpp
-    - rm -f tryDog tryDog.o Dog.o
-    - make
+  - [ chat1.cpp, *server, web: true ]
+  - [ chat2.cpp, *server, web: true ]
+  - [ chat3.cpp, *server, web: true ]
+  - [ data2.cpp, *server, web: true ]
+  - [ data3.cpp, *server, web: true ]
+  - [ chat4.cpp, *server, web: true ]
+
+inputs:
+  - prelude
+  - postlude
