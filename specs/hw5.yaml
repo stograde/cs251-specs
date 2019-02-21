@@ -5,6 +5,7 @@ compilers:
   - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
+  - [ hw5.txt ]
   - [ nested_loop2.cpp, *server, web: true ]
   - [ text_input3.cpp, *server, web: true ]
   - [ text_input4.cpp, *server, web: true ]
