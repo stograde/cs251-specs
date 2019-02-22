@@ -2,7 +2,7 @@
 assignment: hw5
 
 compilers:
-  - &server 'g++ -std=c++11 $@ $SERVER'
+  - &server 'g++ -std=c++11 -fPIC $@ $SERVER'
 
 files:
   - [ hw5.txt ]
