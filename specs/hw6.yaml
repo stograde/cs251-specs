@@ -9,7 +9,7 @@ files:
   - [ text_input6.cpp, *server, web: true ]
   - [ countdown2.cpp, *server, web: true ]
   - [ countdown3.cpp, *server, web: true ]
-  - [ sequences.cpp, *server, web: true ]
+  - [ sequences.cpp ]
 
 input_files:
   - prelude
