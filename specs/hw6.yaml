@@ -12,6 +12,5 @@ files:
   - [ sequences.cpp, *server, web: true ]
 
 input_files:
-  - firefox.txt
   - prelude
   - postlude
