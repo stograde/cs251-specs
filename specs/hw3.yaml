@@ -2,7 +2,7 @@
 assignment: hw3
 
 compilers:
-  - &server 'g++ -std=c++11 -fPIC $@ $SERVER'
+  - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
   - [ hw3.txt ]

@@ -2,7 +2,7 @@
 assignment: hw6
 
 compilers:
-  - &server 'g++ -std=c++11 -fPIC $@ $SERVER'
+  - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
   - [ hw6.txt ]

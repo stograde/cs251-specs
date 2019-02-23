@@ -2,7 +2,7 @@
 assignment: hw2
 
 compilers:
-  - &server 'g++ -std=c++11 -fPIC $@ $SERVER'
+  - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
   - [ hw2.txt ]

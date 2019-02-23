@@ -3,7 +3,7 @@ assignment: hw1
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
-  - &server 'g++ --std=c++11 -fPIC $@ $SERVER'
+  - &server 'g++ --std=c++11 $@ $SERVER'
 
 files:
   - [ hello.cpp, *server, web: true ]
