@@ -3,15 +3,18 @@ assignment: lab1
 
 compilers:
   - &server 'g++ --std=c++11 $@ $SERVER'
+  - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
 
 files:
   - [ chat1.cpp, *server, web: true ]
   - [ chat2.cpp, *server, web: true ]
   - [ chat3.cpp, *server, web: true ]
-  - [ data2.cpp, *server, web: true ]
-  - [ data3.cpp, *server, web: true ]
-  - [ chat4.cpp, *server, web: true ]
+  - [ data2.cpp, *dataport, web: true ]
+  - [ data3.cpp, *dataport, web: true ]
+  - [ chat4.cpp, *dataport, web: true ]
 
 inputs:
   - prelude
   - postlude
+  - data_port.o
+  - sd_fun.h
