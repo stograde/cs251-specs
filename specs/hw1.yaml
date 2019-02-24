@@ -21,3 +21,4 @@ tests:
 inputs:
   - prelude
   - postlude
+  - sd_fun.h

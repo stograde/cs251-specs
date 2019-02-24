@@ -14,3 +14,4 @@ files:
 input_files:
   - prelude
   - postlude
+  - sd_fun.h
