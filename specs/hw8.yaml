@@ -3,16 +3,15 @@ assignment: hw8
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
-  - [ avg2.cpp, *cpp ]
-  - [ stddev2.cpp, *cpp ]
-  - [ address.cpp, *cpp ]
-
-tests:
-  - [ avg2.cpp, cat firefox.txt | $@.exec ]
-  - [ stddev2.cpp, cat firefox.txt | $@.exec ]
-  - [ address.cpp, $@.exec ]
+  - [ hw8_questions.txt ]
+  - [ array_1.cpp, *server ]
+  - [ array_2.cpp, *server ]
+  - [ power_table_2.cpp, *server ]
+  - [ dec_array.cpp, *server ]
 
 inputs:
-  - firefox.txt
+  - prelude
+  - postlude
