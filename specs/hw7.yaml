@@ -2,7 +2,6 @@
 assignment: hw7
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
   - &server 'g++ -std=c++11 $@ $SERVER'
   - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
 
