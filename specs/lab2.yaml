@@ -11,7 +11,7 @@ files:
   - [ chat3b.cpp, *server, web: true ]
   - [ chat4b.cpp, *server, web: true ]
   - [ chat5b.cpp, *server, web: true, optional: true ]
-  - [ chat6b.cpp, *dataport, web: true ]
+  - [ chat6b.cpp, *dataport, web: true, optional: true ]
 
 inputs:
   - sd_fun.h

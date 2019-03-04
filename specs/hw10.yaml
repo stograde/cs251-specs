@@ -2,14 +2,18 @@
 assignment: hw10
 
 compilers:
+  - &server 'g++ -std=c++11 $@ $SERVER'
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ steps.cpp, *cpp ]
-  - [ ptrptr.cpp, *cpp ]
-  - [ sizeof.cpp, *cpp ]
+  - [ length_of2.cpp, *server, web: true ]
+  - [ write_at2.cpp, *server, web: true ]
+  - [ append2.cpp, *server, web: true ]
+  - [ is_match.cpp, *server, web: true ]
+  - [ terminal.cpp, *cpp ]
 
 tests:
-  - [ steps.cpp, $@.exec ]
-  - [ ptrptr.cpp, $@.exec ]
-  - [ sizeof.cpp, $@.exec ]
+  - [ terminal.cpp, $@.exec ]
+
+inputs:
+  - sd_fun.h
