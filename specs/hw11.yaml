@@ -5,17 +5,14 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ loadFile.cpp, *cpp ]
-  - [ avg3.cpp, *cpp ]
+  - [ hw11_questions.txt ]
+  - [ steps.cpp, *cpp ]
+  - [ ptrptr.cpp, *cpp ]
+  - [ sizeof.cpp, *cpp ]
+  - [ ten_even.cpp, *cpp ]
 
 tests:
-  - - loadFile.cpp
-    - cat tiny.txt | $@.exec
-    - cat firefox2.txt | $@.exec
-  - - avg3.cpp
-    - cat tiny.txt | $@.exec
-    - cat firefox2.txt | $@.exec
-
-inputs:
-  - tiny.txt
-  - firefox2.txt
+  - [ steps.cpp, $@.exec ]
+  - [ ptrptr.cpp, $@.exec ]
+  - [ sizeof.cpp, $@.exec ]
+  - [ ten_even.cpp, $@.exec ]
