@@ -5,9 +5,20 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ music1.cpp, *cpp ]
-  - [ music3.cpp, *cpp ]
+  - [ hw12_questions.txt ]
+  - [ myprog.cpp, *cpp ]
+  - [ loadFile.cpp, *cpp ]
+  - [ avg3.cpp, *cpp ]
 
 tests:
-  - [ music1.cpp, $@.exec ]
-  - [ music3.cpp, $@.exec ]
+  - [ myprog.cpp, $@.exec < 3 5 ]
+  - - loadFile.cpp
+    - $@.exec < firefox.txt
+    - $@.exec < tiny.txt
+  - - avg3.cpp
+    - $@.exec < firefox.txt
+    - $@.exec < tiny.txt
+
+inputs:
+  - firefox.txt
+  - tiny.txt

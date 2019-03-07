@@ -17,5 +17,3 @@ tests:
 
 inputs:
   - sd_fun.h
-  - sd_fun.o
-  - str_util.o
