@@ -6,11 +6,13 @@ compilers:
 
 files:
   - [ hw12_questions.txt ]
+  - [ swapPtr.cpp, *cpp ]
   - [ myprog.cpp, *cpp ]
   - [ loadFile.cpp, *cpp ]
   - [ avg3.cpp, *cpp ]
 
 tests:
+  - [ swapPtr.cpp, $@.exec ]
   - [ myprog.cpp, $@.exec < 3 5 ]
   - - loadFile.cpp
     - $@.exec < firefox.txt
