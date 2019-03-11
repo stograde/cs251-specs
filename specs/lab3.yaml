@@ -7,7 +7,6 @@ compilers:
 
 files:
   - [ tryCopy.cpp, *cpp ]
-  - [ img.ascii.ppm ]
   - [ show_resolution.cpp, *cpp ]
   - [ show_one_pixel.cpp, *cpp ]
   - [ same.cpp, *cpp ]
