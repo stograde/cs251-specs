@@ -6,17 +6,20 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - - Doxyfile
-    - cat $@ $SUPPORT/Doxyfile | doxygen -
-    - hide_contents: true
+  - [ app.yaml ]
+  - [ app.mem ]
+  - [ pixelstruct.cpp, *cpp ]
+  - [ b2a.cpp, *cpp ]
+  - [ same2.cpp, *cpp ]
 
-  - [ bin2ascii.cpp, *cpp ]
-  - [ same.cpp, *cpp ]
+  - [ zeroRed2.cpp, *cpp ]
+  - [ doubleGreen2.cpp, *cpp ]
+  - [ greyScale2.cpp, *cpp ]
+  - [ horizSqueeze2.cpp, *cpp ]
+  - [ vertSqueeze2.cpp, *cpp ]
+  - [ addBorder2.cpp, *cpp ]
+  - [ redEye2.cpp, *cpp, optional: true ]
 
-  - [ zeroRed.cpp, *cpp ]
-  - [ doubleGreen.cpp, *cpp ]
-  - [ greyScale.cpp, *cpp ]
-  - [ horizSqueeze.cpp, *cpp ]
-  - [ vertSqueeze.cpp, *cpp ]
-  - [ addBorder.cpp, *cpp ]
-  - [ redEye.cpp, *cpp, optional: true ]
+tests:
+  - [ pixelstruct.cpp, $@.exec ]
+  
