@@ -5,17 +5,12 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ bus1.cpp, *cpp ]
-  - [ bus2.cpp, *cpp ]
-  - [ bus3.cpp, *cpp ]
+  - [ hw14_questions.txt ]
+  - [ linked_lists.cpp, *cpp ]
   - [ class1.cpp, *cpp ]
   - [ class2.cpp, *cpp ]
-  - [ copyn.cpp, *cpp ]
 
 tests:
-  - [ bus1.cpp, $@.exec ]
-  - [ bus2.cpp, $@.exec ]
-  - [ bus3.cpp, $@.exec ]
+  - [ linked_lists.cpp, $@.exec ]
   - [ class1.cpp, $@.exec ]
   - [ class2.cpp, $@.exec ]
-  - [ copyn.cpp, $@.exec ]
