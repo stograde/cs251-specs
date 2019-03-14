@@ -3,7 +3,7 @@ assignment: lab1
 
 compilers:
   - &server 'g++ --std=c++11 $@ $SERVER'
-  - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
+  - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER --static -lcurl'
 
 files:
   - [ chat1.cpp, *server, web: true ]
