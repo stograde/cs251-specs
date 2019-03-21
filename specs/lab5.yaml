@@ -1,17 +1,46 @@
 ---
 assignment: lab5
-folder: images/lab5
+folder: images
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ oneb2a.cpp, *cpp ]
-  - [ onesame2.cpp, *cpp ]
+  - [ Image0.cpp, *cpp ]
+  - [ Image1.cpp, *cpp ]
 
-  - [ onezeroRed2.cpp, *cpp ]
-  - [ onedoubleGreen2.cpp, *cpp ]
-  - [ onegreyScale2.cpp, *cpp ]
-  - [ onehorizSqueeze2.cpp, *cpp ]
-  - [ onevertSqueeze2.cpp, *cpp ]
-  - [ oneaddBorder2.cpp, *cpp ]
+  - [ writer.cpp, *cpp ]
+  - [ reader.cpp, *cpp ]
+  - [ writeread.cpp, *cpp ]
+
+  - [ Image1-5D.cpp, *cpp ]
+  
+  - [ Image-5E.h ]
+  - [ Image-5E.cpp ]
+  - - ImageDriver-5E.cpp
+    - g++ -std=c++11 -c Image-5E.cpp
+    - g++ -std=c++11 -c ImageDriver-5E.cpp
+    - g++ -std=c++11 Image-5E.o ImageDriver-5E.o -o ImageDriver-5E
+
+  - [ Image-5F.h ]
+  - [ Image-5F.cpp ]
+  - - ImageDriver-5F.cpp
+    - g++ -std=c++11 -c Image-5F.cpp
+    - g++ -std=c++11 -c ImageDriver-5F.cpp
+    - g++ -std=c++11 Image-5F.o ImageDriver-5F.o -o ImageDriver-5F
+
+tests:
+  - [ Image0.cpp, $@.exec ]
+  - [ Image1.cpp, $@.exec ]
+
+  - [ writer.cpp, $@.exec ]
+  - [ reader.cpp, $@.exec ]
+  - [ writeread.cpp, $@.exec ]
+
+  - [ Image1-5D.cpp, $@.exec ]
+
+  - [ ImageDriver-5E.cpp, ImageDriver-5E ]
+  - [ ImageDriver-5F.cpp, ImageDriver-5F ]
+
+supporting:
+  - in.txt
