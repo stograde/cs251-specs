@@ -1,0 +1,21 @@
+---
+assignment: hw17
+
+compilers:
+  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+
+files:
+  - [ hw17_questions.txt ]
+  - [ disc.cpp, *cpp ]
+  - [ stock.cpp, *cpp ]
+  - [ operator1.cpp, *cpp ]
+  - [ this.cpp, *cpp ]
+  - [ static.cpp, *cpp ]
+
+tests:
+  - [ disc.cpp, $@.exec ]
+  - [ stock.cpp, $@.exec ]
+  - [ operator1.cpp, $@.exec ]
+  - [ this.cpp, $@.exec ]
+  - [ static.cpp, $@.exec ]
+  
