@@ -1,0 +1,22 @@
+---
+assignment: lab6
+
+compilers:
+  - &server 'g++ -std=c++11 $@ $SERVER'
+
+files:
+  - [ Makefile.DVD ]
+  
+  - [ DVD.h ]
+  - [ DVD.cpp ]
+  - [ DVDDriver.cpp, make DVDDriver -f Makefile.DVD ]
+
+  - [ proto-game.cpp, *server, web: true ]
+  
+  - [ DVDArray.h ]
+  - [ DVDArray.cpp ]
+  - [ DVDArrayDriver.cpp, make DVDArrayDriver -f Makefile.DVD ]
+
+tests:
+  - [ DVDDriver.cpp, DVDDriver ]
+  - [ DVDArrayDriver.cpp, DVDArrayDriver ]
