@@ -1,0 +1,15 @@
+---
+assignment: hw18
+
+compilers:
+  - &cppo 'g++ --std=c++11 $@ -o $@.exec'
+  - &cppc 'g++ --std=c++11 -c $@'
+
+files:
+  - [ hw18_questions.txt ]
+  - [ DVD.h, *cppc ]
+  - [ DVD.cpp, *cppc ]
+  - [ DVDDriver.cpp, *cppo DVD.o DVDDriver.o ]
+
+tests:
+  - [ DVDDriver.cpp, $@.exec ]
