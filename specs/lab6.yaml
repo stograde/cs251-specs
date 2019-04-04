@@ -11,7 +11,7 @@ files:
   - [ DVD.cpp ]
   - [ DVDDriver.cpp, make DVDDriver -f Makefile.DVD ]
 
-  - [ proto-game.cpp, *server, web: true ]
+  # - [ proto-game.cpp, *server, web: true ]
   
   - [ DVDArray.h ]
   - [ DVDArray.cpp ]
