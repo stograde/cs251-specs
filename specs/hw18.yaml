@@ -9,7 +9,7 @@ files:
   - [ hw18_questions.txt ]
   - [ DVD.h, *cppc ]
   - [ DVD.cpp, *cppc ]
-  - [ DVDDriver.cpp, *cppo DVD.o DVDDriver.o ]
+  - [ DVDDriver.cpp, *cppo + 'DVD.o DVDDriver.o' ]
 
 tests:
   - [ DVDDriver.cpp, $@.exec ]
