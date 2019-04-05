@@ -7,9 +7,9 @@ compilers:
 
 files:
   - [ hw18_questions.txt ]
-  - [ DVD.h, *cppc ]
+  - [ DVD.h ]
   - [ DVD.cpp, *cppc ]
-  - [ DVDDriver.cpp, *cppo + 'DVD.o DVDDriver.o' ]
+  - [ DVDDriver.cpp, *cppc, g++ --std=c++11 -o DVDDriver.cpp.exec DVD.o DVDDriver.o ]
 
 tests:
   - [ DVDDriver.cpp, $@.exec ]
