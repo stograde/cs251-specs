@@ -1,0 +1,18 @@
+---
+assignment: hw20
+
+compilers:
+  - &cppc 'g++ --std=c++11 -c $@'
+  - &cppo 'g++ --std=c++11 $@ -o $@.exec'
+
+files:
+  - [ hw20_questions.txt ]
+  - [ IntQueue.h ]
+  - [ IntQueue.cpp, *cppc ]
+  - [ IntQueueDriver, *cppc, g++ --std=c++11 -o IntQueueDriver.cpp.exec IntQueue.o IntQueueDriver.o ]
+
+  - [ inherit.cpp, *cppo ]
+
+tests:
+  - [ IntQueueDriver.cpp, $@.exec ]
+  - [ inherit.cpp, $@.exec ]
