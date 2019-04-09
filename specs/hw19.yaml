@@ -1,0 +1,20 @@
+---
+assignment: hw19
+
+compilers: 
+  - &cppc 'g++ --std=c++11 -c $@'
+
+files:
+  - [ hw19_questions.txt ]
+
+  - [ DVD.h ]
+  - [ DVD.cpp, *cppc ]
+  - [ DVDDriver.cpp, *cppc, g++ --std=c++11 -o DVDDriver.cpp.exec DVD.o DVDDriver.o ]
+
+  - [ IntStack.h ]
+  - [ IntStack.cpp, *cppc ]
+  - [ IntStackDriver.cpp, *cppc, g++ --std=c++11 -o IntStackDriver.cpp.exec IntStack.o IntStackDriver.o ]
+
+tests:
+  - [ DVDDriver.cpp, $@.exec ]
+  - [ IntStackDriver.cpp, $@.exec ]
