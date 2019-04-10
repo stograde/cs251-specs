@@ -9,7 +9,7 @@ files:
   - [ hw20_questions.txt ]
   - [ IntQueue.h ]
   - [ IntQueue.cpp, *cppc ]
-  - [ IntQueueDriver, *cppc, g++ --std=c++11 -o IntQueueDriver.cpp.exec IntQueue.o IntQueueDriver.o ]
+  - [ IntQueueDriver.cpp, *cppc, g++ --std=c++11 -o IntQueueDriver.cpp.exec IntQueue.o IntQueueDriver.o ]
 
   - [ inherit.cpp, *cppo ]
 
