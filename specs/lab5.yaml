@@ -42,8 +42,8 @@ tests:
 
   - [ Image1-5D.cpp, $@.exec ]
 
-  - [ ImageDriver-5E.cpp, ImageDriver-5E ]
-  - [ ImageDriver-5F.cpp, ImageDriver-5F ]
+  - [ ImageDriver-5E.cpp, ./ImageDriver-5E ]
+  - [ ImageDriver-5F.cpp, ./ImageDriver-5F ]
 
 supporting:
   - in.txt
