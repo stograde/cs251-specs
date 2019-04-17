@@ -1,0 +1,7 @@
+---
+assignment: hw21
+
+files:
+  - [ DVDArrayP.h ]
+  - [ DVDArrayP.cpp ]
+  - [ DVDArrayPDriver.cpp ]

@@ -1,0 +1,17 @@
+---
+assignment: hw23
+
+files:
+  - [ hw23_questions.txt ]
+  - [ virtual.cpp ]
+  
+  - [ Makefile ]
+  - [ ColorPoint2.h ]
+  - [ Shape.h ]
+  - [ Shape.cpp ]
+  - [ Rectangle.h ]
+  - [ Rectangle.cpp ]
+  - [ Circle.h ]
+  - [ Circle.cpp ]
+  - [ input.txt ]
+  - [ testShapeInput.cpp ]

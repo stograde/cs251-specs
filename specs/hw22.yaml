@@ -1,0 +1,11 @@
+---
+assignment: hw22
+
+files:
+  - [ DVD.h, optional: true ] # change to required for next year
+  - [ DVD.cpp, optional: true ] # change to required for next year
+  - [ HarryPotterDVD.h ]
+  - [ HarryPotterDVD.cpp ]
+  - [ HarryPotterDVDDriver.cpp ]
+  - [ IntStack.h ]
+  - [ flood_fill_parsons.cpp ]
