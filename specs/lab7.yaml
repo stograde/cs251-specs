@@ -1,2 +1,19 @@
 ---
 assignment: lab7
+
+files:
+  - [ Makefile ]
+  - [ ColorPoint2.h ]
+  - [ Shape.h ]
+  - [ Shape.cpp ]
+  - [ ShapeDriver.cpp ]
+  - [ Rectangle.h ]
+  - [ Rectangle.cpp ]
+  - [ RectangleDriver.cpp ]
+  - [ Circle.h ]
+  - [ Circle.cpp ]
+  - [ CircleDriver.cpp ]
+  - [ ShapeDriver1.cpp ]
+  - [ ShapeDriver2.cpp ]
+
+  - [ proto-draw-inbrowser.cpp ]
