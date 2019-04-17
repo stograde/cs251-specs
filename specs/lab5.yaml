@@ -7,7 +7,10 @@ compilers:
 
 files:
   - [ Image0.cpp, *cpp ]
-  - [ Image1.cpp, *cpp ]
+  - [ Image1-5B.cpp, *cpp, optional: true ]  # change to required for next year
+
+
+  - [ Image.h, optional: true ]  # change to required for next year
 
   - [ writer.cpp, *cpp ]
   - [ reader.cpp, *cpp ]
