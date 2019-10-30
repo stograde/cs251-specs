@@ -5,11 +5,12 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ Veggie2.cpp, *cpp ]
-  - [ Veggie3.cpp, *cpp ]
-  - [ Veggie4.cpp, *cpp ]
+  - [ hw16.txt ]
+  - [ item_price.cpp, *cpp ]
+  - [ ConeWeights.cpp, *cpp ]
+  - [ ratings.cpp, *cpp]
 
 tests:
-  - [ Veggie2.cpp, $@.exec ]
-  - [ Veggie3.cpp, $@.exec ]
-  - [ Veggie4.cpp, $@.exec ]
+  - [ item_price.cpp, $@.exec ]
+  - [ ConeWeights.cpp, $@.exec ]
+  - [ ratings.cpp, $@.exec ]

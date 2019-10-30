@@ -2,17 +2,16 @@
 assignment: hw5
 
 compilers:
-  - &server 'g++ -std=c++11 $@ $SERVER'
+  - &server 'g++ -std=c++11 $@ -o $@.exec ./print.o'
 
 files:
   - [ hw5.txt ]
-  - [ nested_loop2.cpp, *server, web: true ]
-  - [ text_input3.cpp, *server, web: true ]
-  - [ text_input4.cpp, *server, web: true ]
-  - [ text_input5.cpp, *server, web: true ]
+  # - [ f1.cpp, *server ]
 
-inputs:
-  - prelude
-  - postlude
-  - sd_fun.h
-  
+# tests:
+  # - [ f1.cpp, $@.exec ]
+
+
+# inputs:
+  # - ../print.h
+  # - print.o

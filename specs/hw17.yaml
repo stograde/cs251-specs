@@ -5,17 +5,15 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hw17_questions.txt ]
+  - [ hw17.txt ]
+  - [ abort1.cpp, optional: true ] #no actual instructions
+  - [ abort2.cpp, optional: true ] #no actual instructions
+  - [ working3.cpp, *cpp ]
+  - [ Note.cpp, *cpp ]
   - [ disc.cpp, *cpp ]
-  - [ stock.cpp, *cpp ]
-  - [ operator1.cpp, *cpp ]
-  - [ this.cpp, *cpp ]
-  - [ static.cpp, *cpp ]
-
+  - [ initializer_list.cpp, *cpp ]
 tests:
+  - [ working3.cpp, $@.exec ]
+  - [ Note.cpp, $@.exec ]
   - [ disc.cpp, $@.exec ]
-  - [ stock.cpp, $@.exec ]
-  - [ operator1.cpp, $@.exec ]
-  - [ this.cpp, $@.exec ]
-  - [ static.cpp, $@.exec ]
-  
+  - [ initializer_list.cpp, $@.exec ]
