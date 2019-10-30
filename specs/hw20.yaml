@@ -6,13 +6,12 @@ compilers:
   - &cppo 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hw20_questions.txt ]
-  - [ IntQueue.h ]
-  - [ IntQueue.cpp, *cppc ]
-  - [ IntQueueDriver.cpp, *cppc, g++ --std=c++11 -o IntQueueDriver.cpp.exec IntQueue.o IntQueueDriver.o ]
-
-  - [ inherit.cpp, *cppo ]
+  - [ hw20.txt ]
+  - [ methods.cpp, *cppo ]
+  - [ methods2.cpp, *cppo ]
+  - [ methods3.cpp, *cppo ]
 
 tests:
-  - [ IntQueueDriver.cpp, $@.exec ]
-  - [ inherit.cpp, $@.exec ]
+  - [ methods.cpp, $@.exec ]
+  - [ methods2.cpp, $@.exec ]
+  - [ methods3.cpp, $@.exec ]

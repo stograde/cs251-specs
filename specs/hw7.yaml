@@ -7,7 +7,9 @@ compilers:
 
 files:
   - [ hw7_questions.txt ]
-  - [ power_table.cpp, *server, web: true ]
+
+
+  - [ simple_button.cpp, *server, web: true ]
 
 inputs:
   - prelude

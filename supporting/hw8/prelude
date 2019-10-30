@@ -1,5 +1,0 @@
-#include"sd_fun.h"
-
-int main()
-{
-  init();

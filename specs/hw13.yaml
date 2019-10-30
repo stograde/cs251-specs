@@ -1,18 +1,31 @@
 ---
 assignment: hw13
+# possibly compile to their directory, and do a symlink?
+# possibly copy over all the .yaml?
+# possibly start the server from each directory
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &cpp 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
+  - &server 'g++ --std=c++11 $@ -o ../../../server/server_file ./react.o -lcurl'
+  - &server2 'g++ --std=c++11 $@ -o ../../a.out ./react.o -lcurl'
+  - &copy 'cp *.yaml ../../../server/home.yaml'
 
 files:
-  - [ hw13_questions.txt ]
-  - [ music1.cpp, *cpp ]
-  - [ music3.cpp, *cpp ]
-  - [ cat.cpp, *cpp ]
-  - [ cat2.cpp, *cpp ]
-  - [ colorcat.cpp, *cpp ]
+  - [ hw13.txt ]
+  - [ screens.cpp, *copy, *server, web: true]
+  - [ machinery.cpp, *cpp ]
+  - [ pizza.cpp, *cpp ]
+  - [ home.yaml ]
+  - [ screen1.yaml ]
 
 tests:
-  - [ cat.cpp, $@.exec ]
-  - [ cat2.cpp, $@.exec ]
-  - [ colorcat.cpp, $@.exec ]
+  # - [ screens.cpp.exec, ../../../webapp/server.py ]
+  - [ screens.cpp, $@.exec ]
+  - [ machinery.cpp, $@.exec ]
+  - [ pizza.cpp, $@.exec ]
+
+inputs:
+  - [ react.o ]
+  - [ react.h, ../react.h ]
+  - [ print.h ]
+  - [ print.o ]

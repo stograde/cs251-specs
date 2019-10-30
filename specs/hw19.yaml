@@ -2,19 +2,26 @@
 assignment: hw19
 
 compilers: 
-  - &cppc 'g++ --std=c++11 -c $@'
+  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hw19_questions.txt ]
+  - [ hw19.txt ]
 
-  - [ DVD.h ]
-  - [ DVD.cpp, *cppc ]
-  - [ DVDDriver.cpp, *cppc, g++ --std=c++11 -o DVDDriver.cpp.exec DVD.o DVDDriver.o ]
+  - [ Food2.cpp, *cpp ]
+  - [ Food3.cpp, *cpp]
 
-  - [ IntStack.h ]
-  - [ IntStack.cpp, *cppc ]
-  - [ IntStackDriver.cpp, *cppc, g++ --std=c++11 -o IntStackDriver.cpp.exec IntStack.o IntStackDriver.o ]
+  - [ Veggie2.cpp, *cpp ]
+  - [ Veggie3.cpp, *cpp ]
+  - [ Veggie4.cpp, *cpp ]
+  - [ Veggie5.cpp, *cpp ]
+  - [ Veggie6.cpp, *cpp ]
 
 tests:
-  - [ DVDDriver.cpp, $@.exec ]
-  - [ IntStackDriver.cpp, $@.exec ]
+  - [ Food2.cpp, $@.exec ]
+  - [ Food3.cpp, $@.exec ]
+
+  - [ Veggie2.cpp, $@.exec ]
+  - [ Veggie3.cpp, $@.exec ]
+  - [ Veggie4.cpp, $@.exec ]
+  - [ Veggie5.cpp, $@.exec ]
+  - [ Veggie6.cpp, $@.exec ]

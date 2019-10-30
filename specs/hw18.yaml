@@ -6,10 +6,10 @@ compilers:
   - &cppc 'g++ --std=c++11 -c $@'
 
 files:
-  - [ hw18_questions.txt ]
-  - [ DVD.h ]
-  - [ DVD.cpp, *cppc ]
-  - [ DVDDriver.cpp, *cppc, g++ --std=c++11 -o DVDDriver.cpp.exec DVD.o DVDDriver.o ]
+  - [ hw18.txt ]
+  - [ Stock.cpp ]
+  - [ operator_tests.cpp ]
+  - [ CW.cpp ]
+  - [ CW2.cpp ]
+  - [ CW3.cpp ]
 
-tests:
-  - [ DVDDriver.cpp, $@.exec ]
