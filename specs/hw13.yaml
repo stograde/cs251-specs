@@ -1,8 +1,5 @@
 ---
 assignment: hw13
-# possibly compile to their directory, and do a symlink?
-# possibly copy over all the .yaml?
-# possibly start the server from each directory
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
@@ -19,7 +16,6 @@ files:
   - [ screen1.yaml ]
 
 tests:
-  # - [ screens.cpp.exec, ../../../webapp/server.py ]
   - [ screens.cpp, $@.exec ]
   - [ machinery.cpp, $@.exec ]
   - [ pizza.cpp, $@.exec ]

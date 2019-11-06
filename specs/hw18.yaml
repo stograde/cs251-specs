@@ -3,7 +3,6 @@ assignment: hw18
 
 compilers:
   - &cppo 'g++ --std=c++11 $@ -o $@.exec'
-  - &cppc 'g++ --std=c++11 -c $@'
 
 files:
   - [ hw18.txt ]

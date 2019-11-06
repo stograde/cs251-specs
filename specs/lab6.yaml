@@ -5,18 +5,12 @@ compilers:
   - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
-  - [ Makefile.DVD ]
-  
-  - [ DVD.h ]
-  - [ DVD.cpp ]
-  - [ DVDDriver.cpp, make DVDDriver -f Makefile.DVD ]
 
-  # - [ proto-game.cpp, *server, web: true ]
-  
-  - [ DVDArray.h ]
-  - [ DVDArray.cpp ]
-  - [ DVDArrayDriver.cpp, make DVDArrayDriver -f Makefile.DVD ]
+  - [Image0.cpp ]
+  - [ Image1-6B.cpp ]
+  - [ writer.cpp ]
+  - [ reader.cpp ]
+  - [ writeread.cpp ]
+  - [ Image1-6D.cpp ]
+  - [ Image-6F.cpp ]
 
-tests:
-  - [ DVDDriver.cpp, DVDDriver ]
-  - [ DVDArrayDriver.cpp, DVDArrayDriver ]
