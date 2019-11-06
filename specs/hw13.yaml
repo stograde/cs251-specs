@@ -3,13 +3,11 @@ assignment: hw13
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
-  - &server 'g++ --std=c++11 $@ -o ../../../server/server_file ./react.o -lcurl'
-  - &server2 'g++ --std=c++11 $@ -o ../../a.out ./react.o -lcurl'
-  - &copy 'cp *.yaml ../../../server/home.yaml'
+  - &server 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
 
 files:
   - [ hw13.txt ]
-  - [ screens.cpp, *copy, *server, web: true]
+  - [ screens.cpp, *server ]
   - [ machinery.cpp, *cpp ]
   - [ pizza.cpp, *cpp ]
   - [ home.yaml ]
