@@ -2,7 +2,6 @@
 assignment: hw8
 
 compilers:
-  # - &server 'g++ -std=c++11 $@ $SERVER'
   - &server 'g++ -std=c++11 $@ -o $@.exec ./react.o -lcurl'
 
 files:
@@ -13,10 +12,6 @@ files:
   - [ three_buttons.yaml ]
   - [ simple_text.cpp, *server, web: true ]
   - [ simple_text.yaml ]
-  # - [ array_1.cpp, *server ]
-  # - [ array_2.cpp, *server ]
-  # - [ power_table_2.cpp, *server ]
-  # - [ dec_array.cpp, *server ]
 
 tests:
   - [ simple_button.cpp, $@.exec ]
@@ -24,9 +19,6 @@ tests:
   - [ simple_text.cpp, $@.exec ]
 
 inputs:
-  # - prelude
-  # - postlude
-  # - sd_fun.h
   - ../react.h 
   - react.o
   - serve.py

@@ -1,17 +1,17 @@
 ---
 assignment: hw23
 
+compilers:
+  - &cpp 'g++ --std=c++11 $@ -o $@.exec -Wno-write-strings'
+  - &cpp-to-obj 'g++ --std=c++11 -c $@ -Wno-write-strings'
+
 files:
-  - [ hw23_questions.txt ]
-  - [ virtual.cpp ]
-  
-  - [ Makefile ]
-  - [ ColorPoint2.h ]
-  - [ Shape.h ]
-  - [ Shape.cpp ]
-  - [ Rectangle.h ]
-  - [ Rectangle.cpp ]
-  - [ Circle.h ]
-  - [ Circle.cpp ]
-  - [ input.txt ]
-  - [ testShapeInput.cpp ]
+  - [ hw23.txt ]
+  - [ DVDArrayP.h, null ]
+  - [ DVDArrayP.cpp, *cpp-to-obj ]
+  - - DVDArrayPDriver.cpp
+    - *cpp-to-obj
+    - g++ --std=c++11 DVDArrayP.o DVDArrayPDriver.o -o $@.exec
+
+tests:
+  - [ DVDArrayPDriver.cpp, $@.exec ]
