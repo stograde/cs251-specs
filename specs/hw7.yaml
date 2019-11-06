@@ -1,4 +1,3 @@
----
 assignment: hw7
 
 compilers:
@@ -6,12 +5,7 @@ compilers:
   - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
 
 files:
-  - [ hw7_questions.txt ]
-
-
-  - [ simple_button.cpp, *server, web: true ]
-
-inputs:
-  - prelude
-  - postlude
-  - sd_fun.h
+  - [ hw7.txt ]
+  - [ picker.yaml ]
+  - [ picker.mem ]
+  
