@@ -1,23 +1,25 @@
 ---
 assignment: lab3
-folder: images
+# folder: images
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ tryCopy.cpp, *cpp ]
-  - [ show_resolution.cpp, *cpp ]
-  - [ show_one_pixel.cpp, *cpp ]
-  - [ same.cpp, *cpp ]
+  - [ pixelstruct.cpp, *cpp ]
+  - [ ptrs.cpp, *cpp ]
+  - [ read.cpp, *cpp ]
+  - [ oneGreen.cpp, *cpp ]
   - [ zeroRed.cpp, *cpp ]
   - [ doubleGreen.cpp, *cpp ]
   - [ greyScale.cpp, *cpp ]
-  - [ horizSqueeze.cpp, *cpp ]
-  - [ vertSqueeze.cpp, *cpp ]
-  - [ addBorder.cpp, *cpp ]
-  - [ redEye.cpp, *cpp, optional: true ]
+  - [ copyRow.cpp, *cpp ]
+  - [ stripes.cpp, *cpp ]
+  - [ purpleSequence.cpp, *cpp ]
+  - [ purpleCorner.cpp, *cpp ]
+  - [ rectangle.cpp, *cpp ]
+  - [ checkerboard4.cpp, *cpp ]
+  - [ checkerboardN.cpp, *cpp ]
 
-tests:
-  - [ tryCopy.cpp, $@.exec ]
-  # TODO Add tests for other image files
+# tests:
+  # TODO Add tests with image files
