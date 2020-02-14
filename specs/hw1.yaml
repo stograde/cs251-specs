@@ -1,24 +1,16 @@
 ---
 assignment: hw1
 
+spec_version: 3
+
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
-  - &server 'g++ --std=c++11 $@ $SERVER'
+  - &cpp 'g++ -std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hello.cpp, *server, web: true ]
-  - [ hw1_questions.txt ]
-  - [ Makefile ]
-  - [ Dog.h ]
-  - [ Dog.cpp ]
-  - - tryDog.cpp
-    - rm -f tryDog tryDog.o Dog.o
-    - make
+  - file: hw1.txt
+  - file: first.cpp
+    commands: *cpp
 
 tests:
-  - [ tryDog.cpp, ./tryDog ]
-
-inputs:
-  - prelude
-  - postlude
-  - sd_fun.h
+  - file: first.cpp
+    commands: $@.exec

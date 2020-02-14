@@ -1,20 +1,22 @@
 ---
 assignment: hw2
 
+spec_version: 3
+
 compilers:
-  - &server 'g++ -std=c++11 $@ $SERVER'
+  - &server 'g++ -std=c++11 $@ show_mem.o $SERVER'
 
 files:
-  - [ hw2.txt ]
-  - [ byebye3.cpp, *server, web: true ]
-  - [ byebye4.cpp, *server, web: true ]
-  - [ byebye5.cpp, *server, web: true ]
-  - [ byebye6.cpp, *server, web: true ]
-  - [ byebye7.cpp, *server, web: true ]
-  - [ smiley.cpp, *server, web: true ]
-  - [ piazza.cpp, *server, web: true ]
+  - file: hw2.txt
+  - file: second.cpp
+    commands: *server
+    options:
+      web: true
+  - file: third.cpp
+    commands: *server
+    options:
+      web: true
 
 inputs:
-  - prelude
-  - postlude
-  - sd_fun.h
+  - [show_mem.h, ../show_mem.h]
+  - show_mem.o

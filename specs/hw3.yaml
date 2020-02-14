@@ -1,15 +1,8 @@
 ---
 assignment: hw3
 
-compilers:
-  - &server 'g++ -std=c++11 $@ $SERVER'
+spec_version: 3
 
 files:
-  - [ hw3.txt ]
-  - [ profile.cpp ]
-
-inputs:
-  - prelude
-  - postlude
-  - sd_fun.h
+  - file: hw3.txt
   

@@ -1,17 +1,55 @@
 ---
 assignment: hw4
 
+spec_version: 3
+
 compilers:
+  - &cpp 'g++ -std=c++11 $@ -o $@.exec'
   - &server 'g++ -std=c++11 $@ $SERVER'
+  - &server-fetch 'g++ -std=c++11 $@ show_mem.o fetch.o $SERVER -lcurl'
 
 files:
-  - [ hw4.txt ]
-  - [ my_button.cpp, *server, web: true ]
-  - [ my_button2.cpp, *server, web: true ]
-  - [ story.cpp, *server, web: true ]
+  - file: hw4.txt
+  - file: options.cpp
+    commands: *cpp
+  - file: mod3.cpp
+    commands: *cpp
+  - file: story.cpp
+    commands: *server
+    options:
+      web: true
+  - file: loop1.cpp
+    commands: *cpp
+  - file: countdown.cpp
+    commands: *cpp
+  - file: countdown2.cpp
+    commands: *cpp
+  - file: countdown3.cpp
+    commands: *cpp
+  - file: weather.cpp
+    commands: *server-fetch
+    options:
+      web: true
+  - file: weather2.cpp
+    commands: *server
+    options:
+      web: true
+
+tests:
+  - file: options.cpp
+    commands: $@.exec
+  - file: mod3.cpp
+    commands: $@.exec
+  - file: loop1.cpp
+    commands: $@.exec
+  - file: countdown.cpp
+    commands: $@.exec
+  - file: countdown2.cpp
+    commands: $@.exec
+  - file: countdown3.cpp
+    commands: $@.exec
 
 inputs:
-  - prelude
-  - postlude
-  - sd_fun.h
-  
+  - [show_mem.h, ../show_mem.h]
+  - show_mem.o
+  - fetch.o
