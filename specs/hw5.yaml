@@ -1,17 +1,24 @@
 ---
 assignment: hw5
 
+spec_version: 3
+
 compilers:
-  - &server 'g++ -std=c++11 $@ -o $@.exec ./print.o'
+  - &server 'g++ -std=c++11 $@ show_mem.o $SERVER'
+  - &cpp 'g++ -std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hw5.txt ]
-  # - [ f1.cpp, *server ]
+  - file: hw5.txt
+  - file: overlap.cpp
+    commands: *server
+    options:
+      web: true
+  - file: nested_loop.cpp
+    commands: *cpp
+  - file: f1.cpp
+    commands: *cpp
+  - file: app.yaml
 
-# tests:
-  # - [ f1.cpp, $@.exec ]
-
-
-# inputs:
-  # - ../print.h
-  # - print.o
+inputs:
+  - [ show_mem.h, ../show_mem.h ]
+  - show_mem.o
