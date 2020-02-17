@@ -31,7 +31,7 @@ files:
     options:
       web: true
   - file: weather2.cpp
-    commands: *server
+    commands: *server-fetch
     options:
       web: true
 
