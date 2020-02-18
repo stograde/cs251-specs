@@ -8,8 +8,12 @@ compilers:
 
 files:
   - file: hw1.txt
+    options:
+      optional: true
   - file: first.cpp
     commands: *cpp
+    options:
+      optional: true
 
 tests:
   - file: first.cpp
