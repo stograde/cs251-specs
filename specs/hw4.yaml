@@ -50,6 +50,6 @@ tests:
     commands: $@.exec
 
 inputs:
-  - [show_mem.h, ../show_mem.h]
+  - [ show_mem.h, ../show_mem.h ]
   - show_mem.o
   - fetch.o

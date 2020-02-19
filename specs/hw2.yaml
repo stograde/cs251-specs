@@ -18,5 +18,5 @@ files:
       web: true
 
 inputs:
-  - [show_mem.h, ../show_mem.h]
+  - [ show_mem.h, ../show_mem.h ]
   - show_mem.o

@@ -1,20 +1,65 @@
 ---
 assignment: lab1
 
+spec_version: 3
+
 compilers:
   - &server 'g++ --std=c++11 $@ $SERVER'
-  - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
 
 files:
-  - [ chat1.cpp, *server, web: true ]
-  - [ chat2.cpp, *server, web: true ]
-  - [ chat3.cpp, *server, web: true ]
-  - [ data2.cpp, *dataport, web: true ]
-  - [ data3.cpp, *dataport, web: true ]
-  - [ chat4.cpp, *dataport, web: true ]
+  - file: oneGreen.cpp
+    commands: *server
+    options:
+      web: true
+  - file: allGreen.cpp
+    commands: *server
+    options:
+      web: true
+  - file: zeroRed.cpp
+    commands: *server
+    options:
+      web: true
+  - file: doubleGreen.cpp
+    commands: *server
+    options:
+      web: true
+  - file: greyScale.cpp
+    commands: *server
+    options:
+      web: true
+  - file: copyRow.cpp
+    commands: *server
+    options:
+      web: true
+  - file: stripes.cpp
+    commands: *server
+    options:
+      web: true
+  - file: purpleSequence.cpp
+    commands: *server
+    options:
+      web: true
+  - file: purpleCorner.cpp
+    commands: *server
+    options:
+      web: true
+  - file: rectangle.cpp
+    commands: *server
+    options:
+      web: true
+  - file: checkerboard4.cpp
+    commands: *server
+    options:
+      web: true
+  - file: checkerboardN.cpp
+    commands: *server
+    options:
+      web: true
+      optional: true    
 
 inputs:
-  - prelude
-  - postlude
-  - data_port.o
-  - sd_fun.h
+  - [ show_mem.h, ../show_mem.h ]
+  - show_mem.o
+  - big.ppm
+  - small.ppm
+  - tiny.ppm
