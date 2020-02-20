@@ -1,17 +1,16 @@
 ---
 assignment: hw6
 
+spec_version: 3
+
 compilers:
   - &server 'g++ -std=c++11 $@ $SERVER'
 
 files:
-  - [ hw6.txt ]
-  - [ text_input6.cpp, *server, web: true ]
-  - [ countdown2.cpp, *server, web: true ]
-  - [ countdown3.cpp, *server, web: true ]
-  - [ sequences.cpp ]
-
-input_files:
-  - prelude
-  - postlude
-  - sd_fun.h
+  - file: hw6.txt
+  - file: overlap2.cpp
+  - file: default.cpp
+  - file: reference.cpp
+  - file: global.cpp
+  - file: three.yaml
+  - file: three.mem
