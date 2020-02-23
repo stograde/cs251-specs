@@ -1,3 +1,4 @@
+---
 assignment: hw7
 
 spec_version: 3
@@ -5,13 +6,22 @@ spec_version: 3
 compilers:
   - &server 'g++ -std=c++11 $@ $SERVER'
   - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
+  - &cpp 'g++ -std=c++11 $@ -o $@.exec'
 
 files:
   - file: hw7.txt
   - file: double_array.cpp
   - file: terminal.cpp
+    commands: *cpp
   - file: ten_even.cpp
+    commands: *cpp
   - file: myprog.cpp
   - file: smiley.yaml
   - file: piazza_mimic.yaml
   - file: piazza_mimic.mem
+
+tests:
+  - file: terminal.cpp
+    commands: $@.exec
+  - file: ten_even.cpp
+    commands: echo 6 | $@.exec
