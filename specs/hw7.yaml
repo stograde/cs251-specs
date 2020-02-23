@@ -1,11 +1,17 @@
 assignment: hw7
 
+spec_version: 3
+
 compilers:
   - &server 'g++ -std=c++11 $@ $SERVER'
   - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
 
 files:
-  - [ hw7.txt ]
-  - [ picker.yaml ]
-  - [ picker.mem ]
-  
+  - file: hw7.txt
+  - file: double_array.cpp
+  - file: terminal.cpp
+  - file: ten_even.cpp
+  - file: myprog.cpp
+  - file: smiley.yaml
+  - file: piazza_mimic.yaml
+  - file: piazza_mimic.mem
