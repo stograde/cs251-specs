@@ -5,12 +5,19 @@ spec_version: 3
 
 compilers:
   - &server 'g++ -std=c++11 $@ $SERVER'
+  - &cpp 'g++ -std=c++11 $@ -o $@.exec'
 
 files:
   - file: hw6.txt
   - file: overlap2.cpp
+    commands: *server
+    options:
+      web: true
   - file: default.cpp
+    commands: *cpp
   - file: reference.cpp
+    commands: *cpp
   - file: global.cpp
+    commands: *cpp
   - file: three.yaml
   - file: three.mem
