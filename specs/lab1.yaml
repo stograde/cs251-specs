@@ -4,7 +4,7 @@ assignment: lab1
 spec_version: 3
 
 compilers:
-  - &server 'g++ --std=c++11 $@ $SERVER'
+  - &server 'g++ --std=c++11 $@ show_mem.o $SERVER'
 
 files:
   - file: oneGreen.cpp
