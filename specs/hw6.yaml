@@ -23,5 +23,5 @@ files:
   - file: three.mem
 
 inputs:
-  - [ show_mem.cpp, ../show_mem.h ]
+  - [ show_mem.h, ../show_mem.h ]
   - show_mem.o
