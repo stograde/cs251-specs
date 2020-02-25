@@ -1,25 +1,11 @@
 ---
 assignment: hw8
 
-compilers:
-  - &server 'g++ -std=c++11 $@ -o $@.exec ./react.o -lcurl'
+spec_version: 3
 
 files:
-  - [ hw8.txt ]
-  - [ simple_button.cpp, *server, web: true ]
-  - [ green_red.yaml ]
-  - [ three_buttons.cpp, *server, web: true ]
-  - [ three_buttons.yaml ]
-  - [ simple_text.cpp, *server, web: true ]
-  - [ simple_text.yaml ]
-
-tests:
-  - [ simple_button.cpp, $@.exec ]
-  - [ three_buttons.cpp, $@.exec ]
-  - [ simple_text.cpp, $@.exec ]
-
-inputs:
-  - ../react.h 
-  - react.o
-  - serve.py
-
+  - file: hw8.txt
+  - file: write_file.cpp
+  - file: read_file.cpp
+  - file: picker.yaml
+  - file: picker.mem
