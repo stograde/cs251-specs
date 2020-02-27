@@ -1,17 +1,9 @@
 ---
 assignment: hw9
 
-compilers:
-  - &server 'g++ -std=c++11 $@ $SERVER'
+spec_version: 3
 
 files:
-  - [ hw9_questions.txt ]
-  - [ sum3.cpp, *server, web: true ]
-  - [ multiply_two_doubles.cpp, *server, web: true ]
-  - [ convert_to_celsius.cpp, *server, web: true ]
-  - [ absolute_value.cpp, *server, web: true ]
-  - [ default.cpp, *server, web: true ]
-  - [ reference.cpp, *server, web: true ]
-
-inputs:
-  - sd_fun.h
+  - file: hw9.txt
+  - file: login.yaml
+  - file: login.mem
