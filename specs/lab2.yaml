@@ -1,18 +1,18 @@
 ---
 assignment: lab2
 
+spec_version: 3
+
 compilers:
   - &server 'g++ -std=c++11 $@ $SERVER'
   - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
 
 files:
-  - [ chat1b.cpp, *server, web: true ]
-  - [ chat2b.cpp, *server, web: true ]
-  - [ chat3b.cpp, *server, web: true ]
-  - [ chat4b.cpp, *server, web: true ]
-  - [ chat5b.cpp, *server, web: true, optional: true ]
-  - [ chat6b.cpp, *dataport, web: true, optional: true ]
-
-inputs:
-  - sd_fun.h
-  - data_port.o
+  - file: lab2.txt
+  - file: share0.cpp
+  - file: share1.cpp
+  - file: share2.cpp
+  - file: share3.cpp
+  - file: share_server.cpp
+  - file: client.cpp
+  - file: text_adventure.cpp
