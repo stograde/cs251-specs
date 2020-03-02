@@ -1,18 +1,18 @@
 ---
 assignment: hw11
 
+spec_version: 3
+
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hw11.txt ]
-  - [ steps.cpp, *cpp ]
-  - [ ptrptr.cpp, *cpp ]
-  - [ sizeof.cpp, *cpp ]
-  - [ ten_even.cpp, *cpp ]
-
-tests:
-  - [ steps.cpp, $@.exec ]
-  - [ ptrptr.cpp, $@.exec ]
-  - [ sizeof.cpp, $@.exec ]
-  - [ ten_even.cpp, $@.exec ]
+  - file: hw11.txt
+  - file: dynamic.cpp
+  - file: write_at.cpp
+  - file: simple_button.cpp
+  - file: green_red.yaml
+  - file: three_buttons.cpp
+  - file: three_buttons.yaml
+  - file: simple_text.cpp
+  - file: simple_text.yaml
