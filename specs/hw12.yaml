@@ -5,22 +5,10 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hw12.txt ]
-  - [ swapPtr.cpp, *cpp ]
-  - [ myprog.cpp, *cpp ]
-  - [ loadFile.cpp, *cpp ]
-  - [ avg3.cpp, *cpp ]
-
-tests:
-  - [ swapPtr.cpp, $@.exec ]
-  - [ myprog.cpp, $@.exec < 3 5 ]
-  - - loadFile.cpp
-    - $@.exec < firefox.txt
-    - $@.exec < tiny.txt
-  - - avg3.cpp
-    - $@.exec < firefox.txt
-    - $@.exec < tiny.txt
-
-inputs:
-  - firefox.txt
-  - tiny.txt
+  - file: hw12.txt
+  - file: nested_structs.cpp
+  - file: swap_ptr.cpp
+  - file: append.cpp
+  - file: button.yaml
+  - file: count_clicks.cpp
+  - file: count_clicks0.cpp
