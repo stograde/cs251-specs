@@ -16,3 +16,5 @@ files:
   - file: share_server.cpp
   - file: client.cpp
   - file: text_adventure.cpp
+    options:
+      optional: true
