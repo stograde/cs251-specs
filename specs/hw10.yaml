@@ -4,12 +4,15 @@ assignment: hw10
 spec_version: 3
 
 compilers:
-  - &server 'g++ -std=c++11 $@ $SERVER'
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
   - file: hw10.txt
   - file: steps.cpp
+    commands: *cpp
   - file: ptrptr.cpp
+    commands: *cpp
   - file: sizeof.cpp
+    commands: *cpp
   - file: length_of.cpp
+    commands: *cpp
