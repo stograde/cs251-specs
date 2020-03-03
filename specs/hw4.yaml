@@ -12,20 +12,26 @@ files:
   - file: hw4.txt
   - file: options.cpp
     commands: *cpp
+    tests: $@.exec
   - file: mod3.cpp
     commands: *cpp
+    tests: $@.exec
   - file: story.cpp
     commands: *server
     options:
       web: true
   - file: loop1.cpp
     commands: *cpp
+    tests: $@.exec
   - file: countdown.cpp
     commands: *cpp
+    tests: $@.exec
   - file: countdown2.cpp
     commands: *cpp
+    tests: $@.exec
   - file: countdown3.cpp
     commands: *cpp
+    tests: $@.exec
   - file: weather.cpp
     commands: *server-fetch
     options:
@@ -34,20 +40,6 @@ files:
     commands: *server-fetch
     options:
       web: true
-
-tests:
-  - file: options.cpp
-    commands: $@.exec
-  - file: mod3.cpp
-    commands: $@.exec
-  - file: loop1.cpp
-    commands: $@.exec
-  - file: countdown.cpp
-    commands: $@.exec
-  - file: countdown2.cpp
-    commands: $@.exec
-  - file: countdown3.cpp
-    commands: $@.exec
 
 inputs:
   - [ show_mem.h, ../show_mem.h ]

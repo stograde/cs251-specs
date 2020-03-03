@@ -55,7 +55,7 @@ files:
     commands: *server
     options:
       web: true
-      optional: true    
+      optional: true
 
 inputs:
   - [ show_mem.h, ../show_mem.h ]

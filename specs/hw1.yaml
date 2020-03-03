@@ -12,9 +12,6 @@ files:
       optional: true
   - file: first.cpp
     commands: *cpp
+    tests: $@.exec
     options:
       optional: true
-
-tests:
-  - file: first.cpp
-    commands: $@.exec
