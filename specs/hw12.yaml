@@ -14,3 +14,4 @@ files:
   - file: button.yaml
   - file: count_clicks.cpp
   - file: count_clicks0.cpp
+  - file: one_text.yaml
