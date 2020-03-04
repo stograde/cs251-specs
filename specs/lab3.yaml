@@ -6,10 +6,11 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ pixelstruct.cpp, *cpp ]
+  - [ pixel_struct.cpp, *cpp ]
   - [ ptrs.cpp, *cpp ]
   - [ read.cpp, *cpp ]
   - [ oneGreen.cpp, *cpp ]
+  - [ allGreen.cpp, *cpp ]
   - [ zeroRed.cpp, *cpp ]
   - [ doubleGreen.cpp, *cpp ]
   - [ greyScale.cpp, *cpp ]
