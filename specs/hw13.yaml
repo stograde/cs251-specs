@@ -2,24 +2,13 @@
 assignment: hw13
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
+  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
   - &server 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
 
 files:
-  - [ hw13.txt ]
-  - [ screens.cpp, *server ]
-  - [ machinery.cpp, *cpp ]
-  - [ pizza.cpp, *cpp ]
-  - [ home.yaml ]
-  - [ screen1.yaml ]
-
-tests:
-  - [ screens.cpp, $@.exec ]
-  - [ machinery.cpp, $@.exec ]
-  - [ pizza.cpp, $@.exec ]
-
-inputs:
-  - [ react.o ]
-  - [ react.h, ../react.h ]
-  - [ print.h ]
-  - [ print.o ]
+  - [ pizza.cpp ]
+  - [ machinery.cpp ]
+  - [ input.yaml ]
+  - [ input0.cpp ]
+  - [ input1.cpp ]
+  - [ input2.cpp ]
