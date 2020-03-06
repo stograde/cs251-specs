@@ -6,20 +6,20 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ pixelstruct.cpp, *cpp ]
-  - [ ptrs.cpp, *cpp ]
-  - [ read.cpp, *cpp ]
-  - [ oneGreen.cpp, *cpp ]
-  - [ zeroRed.cpp, *cpp ]
-  - [ doubleGreen.cpp, *cpp ]
-  - [ greyScale.cpp, *cpp ]
-  - [ copyRow.cpp, *cpp ]
-  - [ stripes.cpp, *cpp ]
-  - [ purpleSequence.cpp, *cpp ]
-  - [ purpleCorner.cpp, *cpp ]
-  - [ rectangle.cpp, *cpp ]
-  - [ checkerboard4.cpp, *cpp ]
-  - [ checkerboardN.cpp, *cpp ]
+  - [ pixel_struct.cpp ]
+  - [ ptrs.cpp ]
+  - [ read.cpp ]
+  - [ oneGreen.cpp ]
+  - [ zeroRed.cpp ]
+  - [ doubleGreen.cpp ]
+  - [ greyScale.cpp ]
+  - [ copyRow.cpp ]
+  - [ stripes.cpp ]
+  - [ purpleSequence.cpp ]
+  - [ purpleCorner.cpp ]
+  - [ rectangle.cpp ]
+  - [ checkerboard4.cpp ]
+  - [ checkerboardN.cpp ]
 
 # tests:
   # TODO Add tests with image files
