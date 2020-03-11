@@ -5,44 +5,78 @@ assignment: lab3
 spec_version: 3
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &cpp 'g++ --std=c++11 $@ react.o -lcurl -o $@.exec'
   - &server 'g++ -std=c++11 $@ react.o -lcurl $SERVER'
 
 files:
   - file: pixel_struct.cpp
-    commands: *server
+    commands: *cpp
   - file: ptrs.cpp
-    commands: *server
+    commands: *cpp
   - file: read.cpp
-    commands: *server
+    commands: *cpp
   - file: oneGreen.cpp
-    commands: *server
+    commands: *cpp
   - file: zeroRed.cpp
-    commands: *server
+    commands: *cpp
   - file: doubleGreen.cpp
-    commands: *server
+    commands: *cpp
   - file: greyScale.cpp
-    commands: *server
+    commands: *cpp
   - file: copyRow.cpp
-    commands: *server
+    commands: *cpp
   - file: stripes.cpp
-    commands: *server
+    commands: *cpp
   - file: purpleSequence.cpp
-    commands: *server
+    commands: *cpp
   - file: purpleCorner.cpp
-    commands: *server
+    commands: *cpp
   - file: rectangle.cpp
-    commands: *server
+    commands: *cpp
   - file: checkerboard4.cpp
-    commands: *server
+    commands: *cpp
   - file: checkerboardN.cpp
-    commands: *server
+    commands: *cpp
     options:
       optional: true
 
-# tests:
-  # TODO Add tests with image files
+tests:
+  - file: pixel_struct.cpp
+    commands: $@.exec
+  - file: ptrs.cpp
+    commands: $@.exec
+  - file: read.cpp
+    commands: $@.exec
+  - file: oneGreen.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: zeroRed.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: doubleGreen.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: greyScale.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: copyRow.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: stripes.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: purpleSequence.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: purpleCorner.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: rectangle.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: checkerboard4.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+  - file: checkerboardN.cpp
+    commands: [ $@.exec, 'mv output.ppm $@.ppm' ]
+
+# TODO: display result images in md files
+# files are currently saved, but not used,
+# so they could be inspected by hand in each student's repo
 
 inputs:
   - [ react.h, ../react.h ]
   - react.o
+  - big.ppm
+  - small.ppm
+  - tiny.ppm
