@@ -2,24 +2,47 @@
 assignment: lab3
 # folder: images
 
+spec_version: 3
+
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &server 'g++ -std=c++11 $@ react.o -lcurl $SERVER'
 
 files:
-  - [ pixel_struct.cpp ]
-  - [ ptrs.cpp ]
-  - [ read.cpp ]
-  - [ oneGreen.cpp ]
-  - [ zeroRed.cpp ]
-  - [ doubleGreen.cpp ]
-  - [ greyScale.cpp ]
-  - [ copyRow.cpp ]
-  - [ stripes.cpp ]
-  - [ purpleSequence.cpp ]
-  - [ purpleCorner.cpp ]
-  - [ rectangle.cpp ]
-  - [ checkerboard4.cpp ]
-  - [ checkerboardN.cpp ]
+  - file: pixel_struct.cpp
+    commands: *server
+  - file: ptrs.cpp
+    commands: *server
+  - file: read.cpp
+    commands: *server
+  - file: oneGreen.cpp
+    commands: *server
+  - file: zeroRed.cpp
+    commands: *server
+  - file: doubleGreen.cpp
+    commands: *server
+  - file: greyScale.cpp
+    commands: *server
+  - file: copyRow.cpp
+    commands: *server
+  - file: stripes.cpp
+    commands: *server
+  - file: purpleSequence.cpp
+    commands: *server
+  - file: purpleCorner.cpp
+    commands: *server
+  - file: rectangle.cpp
+    commands: *server
+  - file: checkerboard4.cpp
+    commands: *server
+  - file: checkerboardN.cpp
+    commands: *server
+    options:
+      optional: true
 
 # tests:
   # TODO Add tests with image files
+
+inputs:
+  - [ react.h, ../react.h ]
+  - react.o
