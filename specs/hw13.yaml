@@ -26,12 +26,7 @@ files:
     commands: *server
     options:
       web: true
-  # - [ pizza.cpp ]
-  # - [ machinery.cpp ]
-  # - [ input.yaml ]
-  # - [ input0.cpp ]
-  # - [ input1.cpp ]
-  # - [ input2.cpp ]
+
 
 
 tests:
