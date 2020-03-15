@@ -1,14 +1,29 @@
 ---
 assignment: hw14
 
+# spec_version: 3
+
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
 
 files:
-  - [ cat.cpp ]
-  - [ cat2.cpp ]
-  - [ loadFile.cpp ]
-  - [ avg3.cpp ]
-  - [ screens0.cpp ]
+  - [ hw14.txt ]
+  - [ cat.cpp, *cpp ]
+  - [ cat2.cpp, *cpp ]
+  - [ loadFile.cpp, *cpp ]
+  - [ avg3.cpp, *cpp ]
+  - [ screens0.cpp, *cpp]
   - [ home0.yaml ]
   - [ screenB.yaml ]
+
+tests:
+  - [ cat.cpp, $@.exec ]
+  - [ cat2.cpp, $@.exec ]
+
+  - [ loadFile.cpp, cat firefox2.txt | $@.exec ]
+  - [ avg3.cpp, cat firefox2.txt | $@.exec ]
+
+inputs:
+  - firefox2.txt
+  - [ react.h, ../react.h ]
+  - react.o
