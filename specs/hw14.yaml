@@ -5,10 +5,28 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
+  - file: hw14.txt
   - file: cat.cpp
+    commands: *cpp
+    tests: $@.exec
   - file: cat2.cpp
+    commands: *cpp
+    tests: $@.exec
   - file: loadFile.cpp
+    commands: *cpp
+    tests: cat firefox2.txt | $@.exec
   - file: avg3.cpp
+    commands: *cpp
+    tests: cat firefox2.txt | $@.exec
   - file: screens0.cpp
+    commands: *cpp
   - file: home0.yaml
   - file: screenB.yaml
+
+inputs:
+  - file: firefox2.txt
+
+supporting:
+  - file: react.h
+    destination: ../react.h
+  - file: react.o
