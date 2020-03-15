@@ -2,7 +2,7 @@
 assignment: hw6
 
 compilers:
-  - &server 'g++ -std=c++11 $@ show_mem.o $SERVER'
+  - &server 'g++ -std=c++11 $@ show_mem.o'
   - &cpp 'g++ -std=c++11 $@ -o $@.exec'
 
 files:

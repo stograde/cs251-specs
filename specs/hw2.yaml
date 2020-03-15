@@ -2,7 +2,7 @@
 assignment: hw2
 
 compilers:
-  - &server 'g++ -std=c++11 $@ show_mem.o $SERVER'
+  - &server 'g++ -std=c++11 $@ show_mem.o'
 
 files:
   - file: hw2.txt

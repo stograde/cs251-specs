@@ -4,8 +4,8 @@ assignment: lab2
 spec_version: 3
 
 compilers:
-  - &server 'g++ -std=c++11 $@ $SERVER'
-  - &dataport 'g++ --std=c++11 data_port.o $@ $SERVER -lcurl'
+  - &server 'g++ -std=c++11 $@'
+  - &dataport 'g++ --std=c++11 data_port.o $@ -lcurl'
 
 files:
   - file: lab2.txt
