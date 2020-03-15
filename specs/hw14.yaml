@@ -2,13 +2,13 @@
 assignment: hw14
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
+  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ cat.cpp ]
-  - [ cat2.cpp ]
-  - [ loadFile.cpp ]
-  - [ avg3.cpp ]
-  - [ screens0.cpp ]
-  - [ home0.yaml ]
-  - [ screenB.yaml ]
+  - file: cat.cpp
+  - file: cat2.cpp
+  - file: loadFile.cpp
+  - file: avg3.cpp
+  - file: screens0.cpp
+  - file: home0.yaml
+  - file: screenB.yaml

@@ -1,18 +1,17 @@
 ---
 assignment: hw13
 
-spec_version: 3
-
-
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
-  - &server 'g++ --std=c++11 $@ -o $@.exec ./react.o -lcurl'
+  - &server 'g++ --std=c++11 $@ react.o -lcurl'
 
 files:
   - file: pizza.cpp
     commands: *cpp
+    tests: $@.exec
   - file: machinery.cpp
     commands: *cpp
+    tests: $@.exec
   - file: input.yaml
   - file: input0.cpp
     commands: *server
@@ -27,14 +26,7 @@ files:
     options:
       web: true
 
-
-
-tests:
-  - file: pizza.cpp
-    commands: $@.exec
-  - file: machinery.cpp
-    commands: $@.exec
-
 inputs:
-  - [ react.h, ../react.h ]
-  - react.o
+  - file: react.h
+    destination: ../react.h
+  - file: react.o

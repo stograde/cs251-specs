@@ -1,8 +1,6 @@
 ---
 assignment: hw5
 
-spec_version: 3
-
 compilers:
   - &server 'g++ -std=c++11 $@ show_mem.o $SERVER'
   - &cpp 'g++ -std=c++11 $@ -o $@.exec'
@@ -19,6 +17,7 @@ files:
     commands: *cpp
   - file: app.yaml
 
-inputs:
-  - [ show_mem.h, ../show_mem.h ]
-  - show_mem.o
+supporting:
+  - file: show_mem.h
+    destination: ../show_mem.h
+  - file: show_mem.o

@@ -1,8 +1,6 @@
 ---
 assignment: hw6
 
-spec_version: 3
-
 compilers:
   - &server 'g++ -std=c++11 $@ show_mem.o $SERVER'
   - &cpp 'g++ -std=c++11 $@ -o $@.exec'
@@ -23,6 +21,7 @@ files:
   - file: three.yaml
   - file: three.mem
 
-inputs:
-  - [ show_mem.h, ../show_mem.h ]
-  - show_mem.o
+supporting:
+  - file: show_mem.h
+    destination: ../show_mem.h
+  - file: show_mem.o

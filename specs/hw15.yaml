@@ -3,22 +3,37 @@ assignment: hw15
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &server 'g++ --std=c++11 $@ react.o -lcurl'
 
 files:
-  - [ hw15.txt ]
-  - [ bus1.cpp, *cpp ]
-  - [ bus2.cpp, *cpp ]
-  - [ bus3.cpp, *cpp ]
-  - [ class1.cpp, *cpp ]
-  - [ class2.cpp, *cpp ]
-  - [ copyn.cpp, *cpp ]
-  - [ swap.cpp, *cpp ]
+  - file: hw15.txt
+  - file: bus0.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: bus1.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: bus2.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: copyn.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: class1.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: class2.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: swap.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: power_table.cpp
+    commands: *server
+    options:
+      web: true
 
-tests:
-  - [ bus1.cpp, $@.exec ]
-  - [ bus2.cpp, $@.exec ]
-  - [ bus3.cpp, $@.exec ]
-  - [ class1.cpp, $@.exec ]
-  - [ class2.cpp, $@.exec ]
-  - [ copyn.cpp, $@.exec ]
-  - [ swap.cpp, $@.exec ]
+supporting:
+  - file: react.h
+    destination: ../react.h
+  - file: react.o

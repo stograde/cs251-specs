@@ -1,8 +1,6 @@
 ---
 assignment: hw8
 
-spec_version: 3
-
 files:
   - file: hw8.txt
   - file: write_file.cpp

@@ -1,18 +1,35 @@
 ---
 assignment: hw11
 
-spec_version: 3
-
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &server 'g++ --std=c++11 $@ react.o -lcurl'
 
 files:
   - file: hw11.txt
   - file: dynamic.cpp
+    commands: *cpp
+    tests: $@.exec
   - file: write_at.cpp
+    commands: *cpp
+    tests: $@.exec
   - file: simple_button.cpp
+    commands: *server
+    options:
+      web: true
   - file: green_red.yaml
   - file: three_buttons.cpp
+    commands: *server
+    options:
+      web: true
   - file: three_buttons.yaml
   - file: simple_text.cpp
+    commands: *server
+    options:
+      web: true
   - file: simple_text.yaml
+
+supporting:
+  - file: react.h
+    destination: ../react.h
+  - file: react.o

@@ -1,8 +1,6 @@
 ---
 assignment: hw4
 
-spec_version: 3
-
 compilers:
   - &cpp 'g++ -std=c++11 $@ -o $@.exec'
   - &server 'g++ -std=c++11 $@ $SERVER'
@@ -41,7 +39,8 @@ files:
     options:
       web: true
 
-inputs:
-  - [ show_mem.h, ../show_mem.h ]
-  - show_mem.o
-  - fetch.o
+supporting:
+  - file: show_mem.h
+    destination: ../show_mem.h
+  - file: show_mem.o
+  - file: fetch.o

@@ -1,8 +1,6 @@
 ---
 assignment: hw7
 
-spec_version: 3
-
 compilers:
   - &cpp 'g++ -std=c++11 $@ -o $@.exec'
 

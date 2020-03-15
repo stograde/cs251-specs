@@ -1,39 +1,33 @@
 ---
 assignment: hw12
 
-spec_version: 3
-
 compilers:
   - &cpp 'g++ -std=c++11 $@ -o $@.exec'
-  - &server 'g++ -std=c++11 $@ react.o -lcurl $SERVER'
+  - &server 'g++ -std=c++11 $@ react.o -lcurl'
 
 files:
   - file: hw12.txt
   - file: nested_structs.cpp
     commands: *cpp
+    tests: $@.exec
   - file: swap_ptr.cpp
     commands: *cpp
+    tests: $@.exec
   - file: append.cpp
     commands: *cpp
+    tests: $@.exec
   - file: button.yaml
   - file: count_clicks.cpp
     commands: *server
-    # options:
-    #   web: true
+    options:
+      web: true
   - file: count_clicks0.cpp
     commands: *server
+    options:
+      web: true
   - file: one_text.yaml
 
-
-
-tests:
-  - file: nested_structs.cpp
-    commands: $@.exec
-  - file: swap_ptr.cpp
-    commands: $@.exec
-  - file: append.cpp
-    commands: $@.exec
-
-inputs:
-  - [ react.h, ../react.h ]
-  - react.o
+supporting:
+  - file: react.h
+    destination: ../react.h
+  - file: react.o

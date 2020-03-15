@@ -1,8 +1,6 @@
 ---
 assignment: hw9
 
-spec_version: 3
-
 files:
   - file: hw9.txt
   - file: login.yaml

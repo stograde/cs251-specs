@@ -1,8 +1,6 @@
 ---
 assignment: hw3
 
-spec_version: 3
-
 files:
   - file: hw3.txt
   
