@@ -3,7 +3,7 @@ assignment: hw14
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
-  - &server 'g++ --std=c++11 $@ react.o'
+  - &server 'g++ --std=c++11 $@ react.o -lcurl'
 
 files:
   - file: hw14.txt
