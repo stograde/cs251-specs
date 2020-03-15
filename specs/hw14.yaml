@@ -3,6 +3,7 @@ assignment: hw14
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &server 'g++ --std=c++11 $@ react.o'
 
 files:
   - file: hw14.txt
@@ -19,7 +20,7 @@ files:
     commands: *cpp
     tests: cat firefox2.txt | $@.exec
   - file: screens0.cpp
-    commands: *cpp
+    commands: *server
   - file: home0.yaml
   - file: screenB.yaml
 
