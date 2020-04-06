@@ -9,11 +9,11 @@ files:
   - [ abort1.cpp, optional: true ] #no actual instructions
   - [ abort2.cpp, optional: true ] #no actual instructions
   - [ working3.cpp, *cpp ]
-  - [ Note.cpp, *cpp ]
+  - [ note.cpp, *cpp ]
   - [ disc.cpp, *cpp ]
   - [ initializer_list.cpp, *cpp ]
 tests:
   - [ working3.cpp, $@.exec ]
-  - [ Note.cpp, $@.exec ]
+  - [ note.cpp, $@.exec ]
   - [ disc.cpp, $@.exec ]
   - [ initializer_list.cpp, $@.exec ]
