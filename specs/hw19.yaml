@@ -5,23 +5,13 @@ compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hw19.txt ]
-
-  - [ Food2.cpp, *cpp ]
-  - [ Food3.cpp, *cpp]
-
-  - [ Veggie2.cpp, *cpp ]
-  - [ Veggie3.cpp, *cpp ]
-  - [ Veggie4.cpp, *cpp ]
-  - [ Veggie5.cpp, *cpp ]
-  - [ Veggie6.cpp, *cpp ]
-
-tests:
-  - [ Food2.cpp, $@.exec ]
-  - [ Food3.cpp, $@.exec ]
-
-  - [ Veggie2.cpp, $@.exec ]
-  - [ Veggie3.cpp, $@.exec ]
-  - [ Veggie4.cpp, $@.exec ]
-  - [ Veggie5.cpp, $@.exec ]
-  - [ Veggie6.cpp, $@.exec ]
+  - file: hw19.txt
+  - file: operator_tests.cpp
+    commands: *cpp
+  - file: CW2.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: CW3.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: static.cpp

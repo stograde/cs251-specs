@@ -1,14 +1,2 @@
 ---
 assignment: hw18
-
-compilers:
-  - &cppo 'g++ --std=c++11 $@ -o $@.exec'
-
-files:
-  - [ hw18.txt ]
-  - [ Stock.cpp ]
-  - [ operator_tests.cpp ]
-  - [ CW.cpp ]
-  - [ CW2.cpp ]
-  - [ CW3.cpp ]
-

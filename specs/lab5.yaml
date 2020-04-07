@@ -1,18 +1,34 @@
 ---
 assignment: lab5
-# folder: images
+folder: images
 
 compilers:
   - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
+  - file: Image0.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Image1-5B.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: writer.cpp
+    commands: *cpp
+    tests: 
+      - $@.exec
+      - cat output.txt
+  - file: reader.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: writeread.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Image1-5D.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Image-5F.cpp
+    commands: *cpp
+    tests: $@.exec
 
-  - [ write_file.cpp, *cpp ]
-  - [ read_file.cpp, *cpp ]
-  - [ share0.cpp, *cpp ]
-  - [ share1.cpp, *cpp ]
-  - [ share2.cpp, *cpp ]
-  - [ share3.cpp, *cpp ]
-  - [ client.cpp, *cpp ]
-  - [ share_server.cpp, *cpp ]
-  - [ text_adventure.cpp, *cpp ]
+supporting:
+  - file: in.txt
