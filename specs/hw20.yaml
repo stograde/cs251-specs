@@ -2,16 +2,31 @@
 assignment: hw20
 
 compilers:
-  - &cppc 'g++ --std=c++11 -c $@'
-  - &cppo 'g++ --std=c++11 $@ -o $@.exec'
+  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
 
 files:
-  - [ hw20.txt ]
-  - [ methods.cpp, *cppo ]
-  - [ methods2.cpp, *cppo ]
-  - [ methods3.cpp, *cppo ]
-
-tests:
-  - [ methods.cpp, $@.exec ]
-  - [ methods2.cpp, $@.exec ]
-  - [ methods3.cpp, $@.exec ]
+  - file: hw20.txt
+  - file: Food1.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Food2.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Food3.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Veggie2.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Veggie3.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Veggie4.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Veggie5.cpp
+    commands: *cpp
+    tests: $@.exec
+  - file: Veggie6.cpp
+    commands: *cpp
+    tests: $@.exec
