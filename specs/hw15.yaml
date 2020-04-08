@@ -32,6 +32,7 @@ files:
     commands: *server
     options:
       web: true
+      optional_compile: true
 
 supporting:
   - file: react.h
