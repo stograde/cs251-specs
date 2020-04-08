@@ -1,16 +1,22 @@
 ---
 assignment: lab6
 
-compilers:
-  - &server 'g++ -std=c++11 $@ $SERVER'
-
 files:
-
-  - [Image0.cpp ]
-  - [ Image1-6B.cpp ]
-  - [ writer.cpp ]
-  - [ reader.cpp ]
-  - [ writeread.cpp ]
-  - [ Image1-6D.cpp ]
-  - [ Image-6F.cpp ]
-
+  - file: DVD0.cpp
+  - file: Turtle1.cpp
+  - file: DVD1.cpp
+  - file: DVD.h
+  - file: DVD.cpp
+  - file: DVDDriver.cpp
+    commands:
+      - g++ --std=c++11 -c DVD.cpp
+      - g++ --std=c++11 -c DVDDriver.cpp
+      - g++ --std=c++11 DVD.o DVDDriver.o -o DVDDriver
+    tests: 
+      - DVDDriver
+      - rm DVD.o DVDDriver.o
+  - file: Makefile
+    commands: make
+    tests: 
+      - DVDDriver
+      - rm DVD.o DVDDriver.o
