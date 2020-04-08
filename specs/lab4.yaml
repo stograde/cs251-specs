@@ -1,25 +1,30 @@
 ---
 assignment: lab4
-folder: images
 
 compilers:
-  - &cpp 'g++ --std=c++11 $@ -o $@.exec'
+  - &server 'g++ --std=c++11 $@ react.o -lcurl'
 
 files:
-  - [ app.yaml ]
-  - [ app.mem ]
-  - [ pixelstruct.cpp, *cpp ]
-  - [ b2a.cpp, *cpp ]
-  - [ same2.cpp, *cpp ]
-
-  - [ zeroRed2.cpp, *cpp ]
-  - [ doubleGreen2.cpp, *cpp ]
-  - [ greyScale2.cpp, *cpp ]
-  - [ horizSqueeze2.cpp, *cpp ]
-  - [ vertSqueeze2.cpp, *cpp ]
-  - [ addBorder2.cpp, *cpp ]
-  - [ redEye2.cpp, *cpp, optional: true ]
-
-tests:
-  - [ pixelstruct.cpp, $@.exec ]
+  - file: testing.cpp
+    commands: *server
+    options: 
+      web: true
+  - file: test0.yaml
+  - file: test1.yaml
+  - file: story.cpp
+    commands: *server
+    options:
+      web: true
+  - file: story0.yaml
+  - file: story1.yaml
+  - file: story2.yaml
+  - file: story3.yaml
+  - file: story4.yaml
+  - file: story5.yaml
+  - file: story6.yaml
   
+
+supporting:
+  - file: react.h
+    destination: ../react.h
+  - file: react.o
