@@ -1,2 +1,8 @@
 ---
 assignment: hw24
+
+files:
+  - file: DVDArrayP.h
+  - file: DVDArrayP.cpp
+  - file: DVDArrayPDriver.cpp
+  - file: Makefile
