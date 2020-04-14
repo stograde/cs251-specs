@@ -2,7 +2,7 @@
 assignment: hw22
 
 files:
-  - [ hw22.txt ]
-  - [ choose_one.cpp ]
-  - [ Point1.cpp ]
-  - [ that.cpp ]
+  - file: hw22.txt
+  - file: pure_virtual1.cpp
+  - file: abstract_base.cpp
+  - file: pure_virtual2.cpp

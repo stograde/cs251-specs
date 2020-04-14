@@ -2,8 +2,8 @@
 assignment: hw21
 
 files:
-  - [ hw21.txt ]
-  - [ Turtle1.cpp ]
-  - [ pure_virtual.cpp ]
-  - [ abstract_base.cpp ]
-  - [ pure_virtual2.cpp ]
+  - file: hw21.txt
+  - file: methods1.cpp
+  - file: methods2.cpp
+  - file: methods3.cpp
+  - file: HouseCat.cpp
