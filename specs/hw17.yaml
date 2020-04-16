@@ -12,6 +12,9 @@ files:
   - [ note.cpp, *cpp ]
   - [ disc.cpp, *cpp ]
   - [ initializer_list.cpp, *cpp ]
+  - file: operator.cpp
+    commands: *cpp
+    tests: $@.exec
 tests:
   - [ working3.cpp, $@.exec ]
   - [ note.cpp, $@.exec ]
