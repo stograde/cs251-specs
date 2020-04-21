@@ -6,3 +6,10 @@ files:
   - file: DVDArrayP.cpp
   - file: DVDArrayPDriver.cpp
   - file: Makefile
+    commands: make
+    tests:
+      - DVDArrayPDriver
+
+supporting:
+  - file: DVD.h
+  - file: DVD.cpp
