@@ -2,18 +2,12 @@
 assignment: lab7
 
 files:
-  - [ Makefile ]
-  - [ ColorPoint2.h ]
-  - [ Shape.h ]
-  - [ Shape.cpp ]
-  - [ ShapeDriver.cpp ]
-  - [ Rectangle.h ]
-  - [ Rectangle.cpp ]
-  - [ RectangleDriver.cpp ]
-  - [ Circle.h ]
-  - [ Circle.cpp ]
-  - [ CircleDriver.cpp ]
-  - [ ShapeDriver1.cpp ]
-  - [ ShapeDriver2.cpp ]
-
-  - [ proto-draw-inbrowser.cpp ]
+  - file: cmd_line.cpp
+  - file: chat1.cpp
+  - file: chat2.cpp
+  - file: init_shared.cpp
+  - file: chat3.cpp
+  - file: chat4.cpp
+  - file: chat5.cpp
+    options:
+      optional: true
