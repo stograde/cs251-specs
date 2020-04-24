@@ -1,0 +1,20 @@
+---
+assignment: lab8
+
+files:
+  - file: lab8.txt
+  - file: hello.cpp
+  - file: myfile
+  - file: myfile2
+  - file: myfile3
+  - file: A.cpp
+  - file: B.cpp
+  - file: C.cpp
+  - file: D.cpp
+  - file: E.cpp
+  - file: F.cpp
+  - file: G.cpp
+  - file: G2.cpp
+  - file: G3.cpp
+    options:
+      optional: true

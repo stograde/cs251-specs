@@ -9,6 +9,11 @@ files:
   - [ item_price.cpp, *cpp ]
   - [ ConeWeights.cpp, *cpp ]
   - [ ratings.cpp, *cpp]
+  - file: profile.cpp
+  - file: profile.yaml
+  - file: short_array.cpp
+    commands: *cpp
+    tests: $@.exec
 
 tests:
   - [ item_price.cpp, $@.exec ]
